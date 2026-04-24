@@ -1,15 +1,15 @@
 library(data.table)
 library(ggplot2)
 
-runoff_summary <- readRDS('./data/05/runoff_summary.rds')
-runoff_summary_key <- readRDS('./data/05/runoff_summary_key.rds')
+runoff_summary <- readRDS('./results/05/runoff_summary.rds')
+runoff_summary_key <- readRDS('./results/05/runoff_summary_key.rds')
 runoff_stats <- readRDS('./data/05/runoff_stats.rds')
-runoff_month_key <- readRDS('./data/05/runoff_month_key.rds')
-runoff_summer_key <- readRDS('./data/05/runoff_summer_key.rds')
-runoff_winter_key <- readRDS('./data/05/runoff_winter_key.rds')
+runoff_month_key <- readRDS('./results/05/runoff_month_key.rds')
+runoff_summer_key <- readRDS('./results/05/runoff_summer_key.rds')
+runoff_winter_key <- readRDS('./results/05/runoff_winter_key.rds')
 runoff_summer <- readRDS('./data/05/runoff_summer.rds')
 runoff_winter <- readRDS('./data/05/runoff_winter.rds')
-runoff_year_key <- readRDS('./data/05/runoff_year_key.rds')
+runoff_year_key <- readRDS('./results/05/runoff_year_key.rds')
 
 colset_4 <-  c("#D35C37", "#BF9A77", "#D6C6B9", "#97B8C2")
 theme_set(theme_bw())
@@ -167,3 +167,4 @@ ggplot(to_plot, aes(season, value, fill = period)) +
   xlab(label = "Season") +
   ylab(label = "Runoff (m3/s)") +
   theme_bw()
+
